@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LZH</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.5s ease-in-out;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #6B46C1, #4299E1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .animate-fade-in-left {
+            animation: fadeInLeft 1s ease-out;
+        }
+        .animate-fade-in-right {
+            animation: fadeInRight 1s ease-out;
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-70 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold">LZH</div>
+            <div class="flex space-x-4">
+                <a href="#home" class="hover:text-gray-600 active:text-blue-500">首页</a>
+                <a href="#projects" class="hover:text-gray-600 active:text-blue-500">项目</a>
+                <a href="#about" class="hover:text-gray-600 active:text-blue-500">关于</a>
+                <a href="#contact" class="hover:text-gray-600 active:text-blue-500">联系</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section animate-fade-in">
+        <div class="text-center">
+            <h1 class="text-6xl font-bold gradient-text animate__animated animate__fadeInDown">Unleash your creativity,</h1>
+            <h1 style="margin-top: 10px" class="text-6xl font-bold gradient-text animate__animated animate__fadeInDown animate__delay-1s">software shapes the future.</h1>
+            <p style="margin-bottom: 30px" class="mt-4 text-xl animate__animated animate__fadeIn animate__delay-2s">新年鸽很多</p>
+            <div class="space-x-4 animate__animated animate__fadeInUp animate__delay-3s">
+                <button onclick="window.open('https://blog.thzstudent.top')" class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition duration-300 transform hover:scale-105">博客</button>
+                <button onclick="window.open('https://github.com/Dean-Sniper')" class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition duration-300 transform hover:scale-105">GitHub</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-gradient-to-r from-green-500 to-yellow-500 animate-fade-in">
+        <div class="text-center w-full max-w-7xl px-4">
+            <h2 style="color: white" class="text-5xl font-bold mb-8 animate__animated animate__fadeInDown">我的项目</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- 第一个项目 -->
+                <div class="max-w-sm bg-white rounded-2xl shadow-xl p-8 transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-opacity-20 hover:ring-blue-500 animate__animated animate__fadeInLeft">
+                    <h3 class="text-2xl font-bold mb-4 text-left">Autonomous Driving</h3>
+                    <p class="text-gray-700 text-left">利用 AI 更强的视觉识别能力，为用户提供智能的辅助工具。</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2 py-1 rounded">ROS</span>
+                        <span class="bg-green-100 text-green-800 text-sm font-medium px-2 py-1 rounded">Java</span>
+                        <span class="bg-purple-100 text-purple-800 text-sm font-medium px-2 py-1 rounded">Python</span>
+                    </div>
+                    <button style="margin-top: 20px" onclick="window.open('https://github.com/Dean-Sniper/autonomous-driving')" class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition duration-300 transform hover:scale-105">GitHub</button>
+                </div>
+
+                <!-- 第二个项目 -->
+                <div class="max-w-sm bg-white rounded-2xl shadow-xl p-8 transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-opacity-20 hover:ring-blue-500 animate__animated animate__fadeInRight">
+                    <h3 class="text-2xl font-bold mb-4 text-left">Autonomous Highway Pilot</h3>
+                    <p class="text-gray-700 text-left">利用 AI 更强的视觉识别能力，在高速为用户提供便携简易的辅助工具。</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-red-100 text-red-800 text-sm font-medium px-2 py-1 rounded">ROS</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-2 py-1 rounded">Java</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-2 py-1 rounded">Python</span>
+                    </div>
+                    <button style="margin-top: 20px" onclick="window.open('https://github.com/Dean-Sniper/Autonomous-Highway-Pilot')" class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition duration-300 transform hover:scale-105">GitHub</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-gradient-to-r from-blue-500 to-purple-500 animate-fade-in">
+        <div class="text-center">
+            <h2 class="text-5xl font-bold text-white animate__animated animate__fadeInDown">关于我</h2>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-gray-100 animate-fade-in">
+        <div class="text-center">
+            <h2 class="text-5xl font-bold mb-8 animate__animated animate__fadeInDown">联系</h2>
+            <div class="flex justify-center space-x-8">
+                <div class="max-w-sm rounded-2xl shadow-xl p-8 transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-opacity-20 hover:ring-blue-500 animate__animated animate__fadeInLeft">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" class="w-12 h-12 mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">GitHub</h3>
+                    <p class="text-gray-700">@Dean-Sniper</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-t border-gray-200">
+    <div class="fixed bottom-0 w-full text-center py-4 bg-white bg-opacity-70 backdrop-blur-sm">
+        <p>Copyright &copy; 2025 LZH. All right reserved.</p>
+    </div>
+
+<script>
+    // 页面加载时滚动到顶部
+    window.onload = function() {
+        window.scrollTo(0, 0);
+    };
+
+    // 添加更多华丽的动画效果
+    const sections = document.querySelectorAll('.section');
+    sections.forEach((section, index) => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(50px)';
+        setTimeout(() => {
+            section.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+            section.style.opacity = '1';
+            section.style.transform = 'translateY(0)';
+        }, index * 300);
+    });
+
+    // 保持导航链接高亮功能
+    const navLinks = document.querySelectorAll('nav a');
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+<style>
+    // 添加更多动画效果
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes scaleIn {
+        from {
+            transform: scale(0.9);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+    .animate-fade-in {
+        animation: fadeIn 1s ease-out;
+    }
+    .animate-scale-in {
+        animation: scaleIn 1s ease-out;
+    }
+    .section {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+</style>
+</body>
+</html>
